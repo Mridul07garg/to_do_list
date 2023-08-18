@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="box" id="heading">
+        <h1>it's <%= kindofDay %> bro</h1>
+    </div>
+
+
+    <div class="box">
+        <!-- <li><%= workTodo %> </li> -->
+      <%  for(var i=0;i<workTodo.length;i++){ %>
+        <div class="item">
+          <input type="checkbox" >
+          <p> <%= workTodo[i]  %></p>
+        </div>
+
+      <%  } %>
+
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder ="newItem" autocomplete="off" autofocus>
+        <button type="submit" name="button">+</button>
+      </form>
+
+
+    </div>
+
+
+  </body>
+</html>
